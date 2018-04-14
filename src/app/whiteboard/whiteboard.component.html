@@ -1,0 +1,166 @@
+
+<span style="font-size:40px;cursor:pointer;margin-top:40px" (click)="openNav()"><div class="open-side">&#9776;</div></span>
+<div class="side-block">
+    <div class="user-side-block"><div class="users-side-symbol"><img src="assets/images/partic_icon.png"></div></div>
+    <div class="user-name-block"><div class="user-names">U1</div><br><br><div class="user-names">U2</div><br><br><div class="user-names">U3</div><br><br><div class="user-names">U4</div> </div>
+    <div class="chat-side-block"><div class="chat-side-symbol"><img src="assets/images/p_chart_ic.png"></div></div>
+    <div class="chat-name-block"><div class="chat-names"><img src="assets/images/user-symbol.png" alt="user-symbol"></div><br><br><div class="chat-names"><img src="assets/images/user-symbol.png" alt="user-symbol"></div><br><br><div class="chat-names"><img src="assets/images/user-symbol.png" alt="user-symbol"></div><br><br><div class="chat-names"><img src="assets/images/user-symbol.png" alt="user-symbol"></div></div>
+    <div class="file-side-block"><div class="file-side-symbol"><img src="assets/images/c_file_ico.png"></div></div>
+    <div class="file-name-block"></div>
+</div>
+<div id="mySidenav" class="sidenav" style="width:360px;" >
+    <a href="#" class="closebtn" (click)="closeNav()"><div class="close-block"><img src="assets/images/rewind-arrows.png" id="double-arrows"></div></a>
+   
+    <div class="container1"> 
+    <div class="dropdown">
+        <button (click)="myFunction()" class="dropbtn"><span class="participants"><img src="assets/images/partic_icon.png"> Participants</span><span id="click" class="button">&#9660;</span></button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home"><span class="users">User 1</span><div class="partic_border"><img src="assets/images/parti_stop_ico.png" id="hand-symbol"></div><div class="chat-border"><div class="chat-set"><img src="assets/images/p_chart_ic.png" id="chat"></div></div>
+          <div class="video-border"><img src="assets/images/parti_video_icon_1.png" id="video"></div><div class="mic-bord"><img src="assets/images/w_icon2.png" id="mic"></div></a>
+            <a href="#home"><span class="users">User 2</span><div class="partic_border"><img src="assets/images/parti_stop_ico.png" id="hand-symbol"></div><div class="chat-border"><div class="chat-set"><img src="assets/images/p_chart_ic.png" id="chat"></div></div>
+                <div class="video-border"><img src="assets/images/parti_video_icon_1.png" id="video"></div><div class="mic-bord"><img src="assets/images/w_icon2.png" id="mic"></div></a>
+            <a href="#home"><span class="users">User 3</span><div class="partic_border"><img src="assets/images/parti_stop_ico.png" id="hand-symbol"></div><div class="chat-border"><div class="chat-set"><img src="assets/images/p_chart_ic.png" id="chat"></div></div>
+                <div class="video-border"><img src="assets/images/parti_video_icon_1.png" id="video"></div><div class="mic-bord"><img src="assets/images/w_icon2.png" id="mic"></div></a>
+            <a href="#home"><span class="users">User 4</span><div class="partic_border"><img src="assets/images/parti_stop_ico.png" id="hand-symbol"></div><div class="chat-border"><div class="chat-set"><img src="assets/images/p_chart_ic.png" id="chat"></div></div>
+                <div class="video-border"><img src="assets/images/parti_video_icon_1.png" id="video"></div><div class="mic-bord"><img src="assets/images/w_icon2.png" id="mic"></div></a>    
+          </div>
+        </div>
+          
+       <div class= "container2"> 
+        <div class="content"> 
+        <div class="dropdownChat">
+                <button (click)="myChat()" class="dropbtnChat"><span class="chat"><img src="assets/images/p_chart_ic.png"> Chat</span><span id="click1" class="button">&#9660;</span></button> 
+                <div id="myDropdownChat" class="dropdownContentChat">
+                      
+                        <div class="container">
+                        <div class="display-text"><img src="assets/images/user_placeholder.png" alt="Avatar"><span class="text">User 1</span></div>        
+                                <p>Hi, how are you today?</p>
+                                <span class="time-right">11:00</span>
+                              </div>
+
+                        <div class="container darker">
+                            <div class="display-text"><img src="assets/images/user_placeholder.png" alt="Avatar" class="right"><span class="text1">User 2</span></div>
+                             <div class="chat-value">{{value}}</div>    
+                             <span class="time-left">11:01</span>    
+                                </div>
+                               
+                               <div class="container">
+                                  <div class="display-text"><img src="assets/images/user_placeholder.png" alt="Avatar"><span class="text">User 1</span></div>
+                                        <span class="time-right">11:00</span>
+                                      </div>
+        
+                                <div class="container darker">
+                                    <div class="display-text"><img src="assets/images/user_placeholder.png" alt="Avatar" class="right"><span class="text1">User 2</span></div>
+                                     <div class="chat-value"></div>    
+                                     <span class="time-left">11:01</span>    
+                                        </div>            
+                              
+                        <div class="text-box">
+        
+                        <input type="text"  id="chat-text"  placeholder="Enter your message here" #box (keyup.enter)="onEnter(box.value)" value="{{text}}"  autofocus> 
+                        <div class="popup" (click)="Popup()"><img src="assets/images/happiness.png" alt="happiness"  id="happiness"><span class="popuptext" id="myPopup">
+                        <div class="emoticons"><img src="{{borPath}}" alt="{{altBored}}" (click)="EmoBor()" id="bor"><img src="assets/images/happy.png" alt="happy" (click)="EmoHappy()"><img src="assets/images/smiling.png" alt="smiling" (click)="EmoSmile()">
+                          <img src="assets/images/happy_mouth.png" alt="happy_mouth" (click)="EmoMouth()"><img src="assets/images/mad.png" alt="mad" (click)="EmoMad()"><img src="assets/images/nerd.png" alt="nerd">
+                          <img src="assets/images/quiet.png" alt="quiet" (click)="EmoQuiet()"><img src="assets/images/sad.png" alt="sad" (click)="EmoSad()"><img src="assets/images/secret.png" alt="secret" (click)="EmoSecret()">
+                          <img src="assets/images/smart.png" alt="smart" (click)="EmoSmart()"><img src="assets/images/surprised.png" alt="surprised" (click)="EmoSurprised()"><img src="assets/images/suspicious.png" alt="suspicious" (click)="EmoSuspicious()">
+                          <img src="assets/images/unhappy.png" alt="unhappy" (click)="EmoUnhappy()"><img src="assets/images/wink.png" alt="wink" (click)="EmoWink()"><img src="assets/images/thumb_up.png" alt="thumb-up" (click)="EmoThumb()">
+                          <img src="assets/images/thumb-down.png" alt="thumb-down" (click)="EmoDown()"></div></span></div>
+                        <button type="button" class="chat-btn" (click)="getChat()">Send</button>        
+                        </div>            
+                  </div>  
+        </div>
+          
+          <div class="file-content"> 
+        <div class="dropdownFiles">
+                <button (click)="myFunctionFiles()" class="dropbtnFiles"><span class="chat"><img src="assets/images/c_file_ico.png"> Files</span><span id="click1" class="button">&#9660;</span></button> 
+                <div id="myDropdownFiles" class="dropdownContentFiles">
+                        <a href="#"><img src="assets/images/c_download_ico.png">&nbsp;&nbsp;document.pdf</a>
+                        <a href="#"><img src="assets/images/c_download_ico.png">&nbsp;&nbsp;VILT Screen Shot V1.docx</a>
+                        <a href="#"><img src="assets/images/c_download_ico.png">&nbsp;&nbsp;VILT Screen Shot V2.docx</a>
+                        <a href="#"><img src="assets/images/c_download_ico.png">&nbsp;&nbsp;VILT Screen Shot V3.docx</a>
+                        <a href="#"><img src="assets/images/c_download_ico.png">&nbsp;&nbsp;VILT Screen Shot V4.docx</a>
+                </div>    
+         </div>
+        </div>
+        </div>   
+        </div>
+
+ </div>
+</div>
+
+
+<div id="main"> 
+   
+<div id="scroll" [@toggle1]="state">
+  
+    <ul>
+    <li><a href="#"><img src="assets/images/user-placeholder.png" alt="user-image"></a></li>
+    <li><a href="#"><img src="assets/images/user-placeholder.png" alt="user-image"></a></li>
+    <li><a href="#"><img src="assets/images/user-placeholder.png" alt="user-image"></a></li>
+    <li><a href="#"><img src="assets/images/user-placeholder.png" alt="user-image"></a></li>
+    <li><a href="#"><img src="assets/images/user-placeholder.png" alt="user-image"></a></li>
+    <li><a href="#"><img src="assets/images/user-placeholder.png" alt="user-image"></a></li>
+    <li><a href="#"><img src="assets/images/user-placeholder.png" alt="user-image"></a></li>
+    <li><a href="#"><img src="assets/images/user-placeholder.png" alt="user-image"></a></li>
+    <li><a href="#"><img src="assets/images/user-placeholder.png" alt="user-image"> <button  type="button"   id = "tog" (click)="toggle1()">Hide</button></a></li>
+    </ul>
+    </div>
+
+    
+
+ 
+<div class="whiteboard">
+  <div class="whiteboard-display"><strong>Whiteboard</strong> <button  type="button" class="btn btn-primary"  id = "tog-show" (click)="toggle1()">Show Users</button>  </div>
+
+</div>
+
+<div class="whiteboard-panel">
+    <ul class="icon-box" id="icon-box-back">
+         
+        <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico1.png" alt="eraser"  class="tool-icon"><span class="text">Eraser</span></div></li>
+        <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico2.png" alt="edit-file" class="tool-icon"><span class="text">Clear&nbsp;Object</span></div></li> 
+        <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico3.png" alt="save" class="tool-icon"><span class="text">Save&nbsp;&amp;&nbsp;Export</span></div></li>
+        <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico4.png" alt="undo" class="tool-icon"><span class="text">Undo</span></div></li> 
+        <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico5.png" alt="cursor-filled" class="tool-icon"><span class="text">Pointer</span></div></li>  
+       <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico6.png" alt="cursor" class="tool-icon"><span class="text">Select&nbsp;an&nbsp;Object</span></div></li>
+       <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico7.png" alt="text" class="tool-icon"><span class="text">Text</span></div></li> 
+       <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico8.png" alt="paint-brush" class="tool-icon"><span class="text">Paint</span></div></li> 
+       <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico9.png" alt="line" class="tool-icon"><span class="text">Draw&nbsp;Line</span></div></li>
+        <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico10.png" alt="pencil" class="tool-icon"><span class="text">Highlighter</span></div></li>
+        <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico11.png" alt="square" class="tool-icon"><span class="text">Rectangle</span></div></li>
+      <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico12.png" alt="round" class="tool-icon"><span class="text">Ellipse</span></div></li> 
+       <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico13.png" alt="arrow" class="tool-icon"><span class="text">Arrow</span></div></li>
+       <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico14.png" alt="map" class="tool-icon"><span class="text">Cliparts</span></div></li>
+       <li _ngcontent-c1 class="tools-align"><div class="display-text"><img src="assets/images/editor_ico15.png" alt="settings" class="tool-icon"><span class="text">Tools&nbsp;Settings</span></div></li>       
+        
+        </ul>
+  </div>
+
+  <div class="mute-wrapper" id="volume-back"> 
+      <input type='range' id="mute">
+      </div>
+     
+
+      <div class="mute-wrapper1" id="mute-back"> 
+        <input type='range' id="mute1">
+        </div>
+  <ul class="media" id="media-controls">
+       
+        
+      <li ><a href="#" (click)="changeIcon('volume');" id="volume-border"><img src= "{{ImgPath}}" alt="{{altVolume}}" class="media-icon" id="volume-access"></a><br><div class="VolIcons-back">{{volume}}</div></li> 
+      <li><a href="#" (click)="changeIcon('mic');" id="mic-border"><img src="{{ImgMic}}" alt="{{altMic}}" class="media-icon" id="mic-access" ></a><br><div class="MicIcons-back">{{mic}}</div></li> 
+     <li><a href="#" id="screen-border" class="media-back"><img src="assets/images/screen-share.png" alt="share-screen" class="media-icon" id="screen-access"></a><br><div class="mediaIcons-back">Screen Share</div></li>
+      <li><a href="#" id="video-border" class="media-back"><img src="assets/images/share-video.png" alt="share-video" class="media-icon" id="video-access"></a><br><div class="mediaIcons-back">Video Share</div></li>   
+     <li><a href="#" id="hand-border" class="media-back"><img src="assets/images/hand.png" alt="raise-hand" class="media-icon" id="hand-access"></a><div id="hand"><div class="mediaIcons-back">Raise Hand</div></div></li> 
+     <li><a href="#"  id="media-border" class="media-back"><img src="assets/images/chat.png" alt="chat" class="media-icon" id="chat-access"></a><br><div class="mediaIcons-back">To be a moderator</div></li>     
+     <li><a href="#" id="media-border" class="media-back"><img src="assets/images/whiteboard_access.png" alt="whiteboard" class="media-icon" id="white-access"></a><br><div class="mediaIcons-back">For Whiteboard Access</div></li>     
+             
+         
+         
+    </ul>
+</div>
+
+
+  
+
+  
